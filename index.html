@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultimate Interactive Quiz Challenge</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-        
-        body, html {
+
+        body,
+        html {
             margin: 0;
             padding: 0;
             height: 100%;
@@ -19,9 +21,17 @@
         }
 
         @keyframes gradientBG {
-            0% {background-position: 0% 50%;}
-            50% {background-position: 100% 50%;}
-            100% {background-position: 0% 50%;}
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         .container {
@@ -95,7 +105,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0, 0, 0, 0.8);
             justify-content: center;
             align-items: center;
             z-index: 2;
@@ -136,14 +146,52 @@
             color: #7f8c8d;
             margin-top: 10px;
         }
+
+        .timer-container {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            margin: 20px auto;
+        }
+
+        .timer-circle {
+            fill: none;
+            stroke: #e74c3c;
+            stroke-width: 5;
+            stroke-linecap: round;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+
+        .timer-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>Ultimate Interactive Quiz Challenge</h1>
+        <h1>Ultimate Interactive Quiz Challenge 🧠</h1>
+        <div class="timer-container">
+            <svg width="60" height="60" viewBox="0 0 60 60">
+                <circle class="timer-circle" cx="30" cy="30" r="25"></circle>
+            </svg>
+            <div class="timer-text" id="timer">10</div>
+        </div>
+        
         <div id="quiz-container"></div>
-        <div id="progress-bar"><div id="progress"></div></div>
         <div id="set-info"></div>
+
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+
     </div>
 
     <div id="score-popup">
@@ -392,6 +440,7 @@
 
             quizContainer.innerHTML = questionHTML;
             updateProgress();
+            startTimer();
         }
 
         function selectAnswer(button, answer) {
@@ -401,6 +450,7 @@
         }
 
         function submitAnswer() {
+            clearInterval(timer);
             const currentQuizSet = quizSets[currentSet];
             if (selectedAnswer === currentQuizSet[currentQuestion].answer) {
                 score++;
@@ -438,20 +488,43 @@
             const nextButton = scorePopup.querySelector('button');
             if (score < 4) {
                 nextButton.textContent = 'Retry Set';
-                nextButton.onclick = function() {
+                nextButton.onclick = function () {
                     retrySet();
                     openRandomUrl();
                 };
                 scoreText.textContent += '\nYou need to score at least 4 to move to the next set. Please try again!';
             } else {
                 nextButton.textContent = 'Ready for Next Set';
-                nextButton.onclick = function() {
+                nextButton.onclick = function () {
                     readyForNextSet();
                     openRandomUrl();
                 };
             }
 
             scorePopup.style.display = 'flex';
+        }
+        function startTimer() {
+            let timeLeft = 10;
+            const timerElement = document.getElementById('timer');
+            const timerCircle = document.querySelector('.timer-circle');
+            const circumference = 2 * Math.PI * 25; // 25 is the radius of the circle
+
+            timerElement.textContent = timeLeft;
+            timerCircle.style.strokeDasharray = circumference;
+            timerCircle.style.strokeDashoffset = 0;
+
+            timer = setInterval(() => {
+                timeLeft--;
+                timerElement.textContent = timeLeft;
+
+                const offset = circumference * (1 - timeLeft / 10);
+                timerCircle.style.strokeDashoffset = offset;
+
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    submitAnswer();
+                }
+            }, 1000);
         }
 
         function retrySet() {
@@ -463,6 +536,7 @@
         }
 
         function readyForNextSet() {
+            clearInterval(timer);
             currentSet++;
             if (currentSet < quizSets.length) {
                 currentQuestion = 0;
@@ -488,4 +562,5 @@
         startQuiz();
     </script>
 </body>
+
 </html>
