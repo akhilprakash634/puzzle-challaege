@@ -150,9 +150,26 @@
         <div class="popup-content">
             <h2>Set Completed!</h2>
             <p id="score-text"></p>
-            <button onclick="readyForNextSet(); window.open('https://m.indiamart.com/impcat/flavored-almond.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0824&utm_content=48', '_blank')">Ready for Next Set</button>
+            <button onclick="readyForNextSet(); openRandomUrl()">Ready for Next Set</button>
         </div>
-        </div>
+    </div>
+
+    <script>
+        const urlList = [
+            'https://m.indiamart.com/impcat/surgical-headlight.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0824&utm_content=49',
+            'https://m.indiamart.com/impcat/automotive-lights.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0824&utm_content=50',
+            'https://m.indiamart.com/impcat/automotive-headlights.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0824&utm_content=51',
+            'https://m.indiamart.com/impcat/pneumatic-tools.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0824&utm_content=52',
+            'https://m.indiamart.com/impcat/press-tools.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0824&utm_content=53',
+            'https://m.indiamart.com/impcat/hand-tool.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0824&utm_content=54'
+        ];
+
+        function openRandomUrl() {
+            const randomIndex = Math.floor(Math.random() * urlList.length);
+            const randomUrl = urlList[randomIndex];
+            window.open(randomUrl, '_blank');
+        }
+    </script>
     </div>
 
     <script>
