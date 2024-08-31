@@ -419,20 +419,47 @@
         function showScore() {
             const scorePopup = document.getElementById('score-popup');
             const scoreText = document.getElementById('score-text');
-            scoreText.textContent = `Your score: ${score} out of ${quizSets[currentSet].length}`;
+            const currentQuizSet = quizSets[currentSet];
+            scoreText.textContent = `Your score: ${score} out of ${currentQuizSet.length}`;
 
             // Add emotes based on score
             let emote = '';
-            if (score === quizSets[currentSet].length) {
-            emote = '🎉';
-            } else if (score >= quizSets[currentSet].length / 2) {
-            emote = '😊';
+            if (score === currentQuizSet.length) {
+                emote = '🎉';
+            } else if (score >= currentQuizSet.length / 2) {
+                emote = '😊';
             } else {
-            emote = '😞';
+                emote = '😞';
             }
 
             scoreText.textContent += ` ${emote}`;
+
+            // Change the button text and onclick function based on the score
+            const nextButton = scorePopup.querySelector('button');
+            if (score < 4) {
+                nextButton.textContent = 'Retry Set';
+                nextButton.onclick = function() {
+                    retrySet();
+                    openRandomUrl();
+                };
+                scoreText.textContent += '\nYou need to score at least 4 to move to the next set. Please try again!';
+            } else {
+                nextButton.textContent = 'Ready for Next Set';
+                nextButton.onclick = function() {
+                    readyForNextSet();
+                    openRandomUrl();
+                };
+            }
+
             scorePopup.style.display = 'flex';
+        }
+
+        function retrySet() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('score-popup').style.display = 'none';
+            showQuestion();
+            updateProgress();
         }
 
         function readyForNextSet() {
