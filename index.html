@@ -204,12 +204,13 @@
 
     <script>
         const urlList = [
-            'https://m.indiamart.com/impcat/surgical-headlight.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0824&utm_content=49',
-            'https://m.indiamart.com/impcat/automotive-lights.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0824&utm_content=50',
-            'https://m.indiamart.com/impcat/automotive-headlights.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0824&utm_content=51',
-            'https://m.indiamart.com/impcat/pneumatic-tools.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0824&utm_content=52',
-            'https://m.indiamart.com/impcat/press-tools.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0824&utm_content=53',
-            'https://m.indiamart.com/impcat/hand-tool.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0824&utm_content=54'
+            'https://m.indiamart.com/impcat/child-gps-tracking-device.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=55',
+            'https://m.indiamart.com/impcat/kids-readymade-garments.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=56',
+            'https://m.indiamart.com/impcat/kids-apron.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=57',
+            'https://m.indiamart.com/impcat/abacus.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=55',
+            'https://m.indiamart.com/impcat/educational-toys.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=56',
+            'https://m.indiamart.com/impcat/flash-card.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=57',
+            'https://www.youtube.com/@lifefactsday?sub_confirmation=1'
         ];
 
         function openRandomUrl() {
@@ -418,7 +419,16 @@
         let score = 0;
         let selectedAnswer = '';
 
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
         function startQuiz() {
+            shuffleArray(quizSets);
             showQuestion();
             updateProgress();
         }
