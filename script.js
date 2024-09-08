@@ -176,6 +176,7 @@ function moveToNextQuestion() {
 function showScore() {
     const scorePopup = document.getElementById('score-popup');
     const scoreText = document.getElementById('score-text');
+    const popupContent = scorePopup.querySelector('.popup-content');
     const currentQuizSet = quizSets[currentSet];
     
     if (!currentQuizSet) {
@@ -186,32 +187,63 @@ function showScore() {
     scoreText.textContent = `Your score for this set: ${currentSetScore} out of ${currentQuizSet.length}`;
 
     let emote = currentSetScore === currentQuizSet.length ? '🎉' : currentSetScore >= PASSING_SCORE ? '😊' : '😞';
-    scoreText.textContent += ` ${emote}`;
+    scoreText.textContent += ` ${emote}\nTotal score: ${totalScore}`;
 
     setScores[currentSet] = Math.max(setScores[currentSet], currentSetScore);
     totalScore = setScores.reduce((sum, score) => score >= PASSING_SCORE ? sum + score : sum, 0);
     updateUserScore(totalScore);
 
-    const nextButton = scorePopup.querySelector('button');
+    // Update or create the action button (Retry Set or Next Set)
+    let actionButton = popupContent.querySelector('button:not(#whatsapp-share)');
+    if (!actionButton) {
+        actionButton = document.createElement('button');
+        popupContent.appendChild(actionButton);
+    }
+    
     if (currentSetScore < PASSING_SCORE) {
-        nextButton.textContent = 'Retry Set';
-        nextButton.onclick = () => {
+        actionButton.textContent = 'Retry Set';
+        actionButton.onclick = () => {
             retrySet();
             openRandomUrl();
         };
     } else {
-        nextButton.textContent = 'Next Set';
-        nextButton.onclick = () => {
+        actionButton.textContent = 'Next Set';
+        actionButton.onclick = () => {
             nextSet();
             openRandomUrl();
         };
     }
 
-    scoreText.textContent += `\nTotal score: ${totalScore}`;
-    updateScoreDisplay();
+    // Update or create the WhatsApp share button
+    let shareButton = popupContent.querySelector('#whatsapp-share');
+    if (!shareButton) {
+        shareButton = document.createElement('button');
+        shareButton.id = 'whatsapp-share';
+        popupContent.appendChild(shareButton);
+    }
+    shareButton.textContent = 'Share on WhatsApp';
+    shareButton.onclick = () => {
+        const shareLink = generateWhatsAppShareLink(totalScore);
+        window.open(shareLink, '_blank');
+    };
     
     scorePopup.style.display = 'flex';
+    updateScoreDisplay();
 }
+
+function generateWhatsAppShareLink(score) {
+    const message = `I just scored ${score} in the Ultimate Interactive Quiz Challenge!\n 
+    Think you can beat me?  Bring it on! \n
+    25 sets of mind-bending questions await you. Each correct answer brings you closer to the top!\n
+    Take the challenge now and see if you can outscore me: Play Now https://puzzle-challaege.pages.dev! \n
+    Are you up for it? `;
+
+    // Encode the entire message
+    // const encodedMessage = encodeURIComponent(message);
+    
+    return `https://wa.me/?text=${message}`;
+};
+
 
 function startTimer() {
     timeLeft = 10;
