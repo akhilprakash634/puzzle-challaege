@@ -701,7 +701,13 @@ const quizData = {
         'https://m.indiamart.com/impcat/solar-power-plants.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=78',
         'https://m.indiamart.com/impcat/lithium-primary-batteries.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=79',
         'https://m.indiamart.com/impcat/rechargeable-li-ion-battery.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=80',
-        'https://m.indiamart.com/impcat/luminous-inverter-batteries.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=81'
+        'https://m.indiamart.com/impcat/luminous-inverter-batteries.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=81',
+        'https://m.indiamart.com/impcat/glass-cutting-machines.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=82',
+        'https://m.indiamart.com/impcat/mobile-crushing-plant.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=83',
+        'https://m.indiamart.com/impcat/vinyl-cutting-plotter-machine.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=84',
+        'https://m.indiamart.com/impcat/modular-kitchens.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=85',
+        'https://m.indiamart.com/impcat/modern-kitchen.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=86',
+        'https://m.indiamart.com/impcat/wooden-modular-kitchen.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=87'
 
 
 
