@@ -188,10 +188,7 @@ function showScore() {
     let emote = currentSetScore === currentQuizSet.length ? '🎉' : currentSetScore >= PASSING_SCORE ? '😊' : '😞';
     scoreText.textContent += ` ${emote}`;
 
-    // Update the set score if it's higher than previous attempts
     setScores[currentSet] = Math.max(setScores[currentSet], currentSetScore);
-
-    // Recalculate total score
     totalScore = setScores.reduce((sum, score) => score >= PASSING_SCORE ? sum + score : sum, 0);
     updateUserScore(totalScore);
 
@@ -229,9 +226,9 @@ function startTimer() {
             if (timeLeft <= 0) {
                 clearInterval(timer);
                 if (selectedAnswer !== '') {
-                    submitAnswer(); // Auto-submit if an answer is selected
+                    submitAnswer();
                 } else {
-                    moveToNextQuestion(); // Move to next if no answer selected
+                    moveToNextQuestion();
                 }
             }
         }
@@ -343,16 +340,23 @@ function openRandomUrl() {
     console.log('Opening random URL');
     const randomIndex = Math.floor(Math.random() * urlList.length);
     const randomUrl = urlList[randomIndex];
+    
+    // Pause the timer
+    pauseTimer();
+    
+    // Open the URL in a new tab
     window.open(randomUrl, '_blank');
 }
 
 function showLeaderboard() {
     document.getElementById('leaderboard-popup').style.display = 'block';
     updateLeaderboard();
+    pauseTimer();
 }
 
 function hideLeaderboard() {
     document.getElementById('leaderboard-popup').style.display = 'none';
+    resumeTimer();
 }
 
 function setupLeaderboardListeners() {
