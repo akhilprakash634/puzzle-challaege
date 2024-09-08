@@ -232,16 +232,16 @@ function showScore() {
 }
 
 function generateWhatsAppShareLink(score) {
-    const message = `I just scored ${score} in the Ultimate Interactive Quiz Challenge! 
-    Think you can beat me?  Bring it on! 
-     25 sets of mind-bending questions await you. Each correct answer brings you closer to the top!
-     Take the challenge now and see if you can outscore me: Play Now https://puzzle-challaege.pages.dev!
+    const message = `I just scored ${score} in the Ultimate Interactive Quiz Challenge!\n 
+    Think you can beat me?  Bring it on! \n
+    25 sets of mind-bending questions await you. Each correct answer brings you closer to the top!\n
+    Take the challenge now and see if you can outscore me: Play Now https://puzzle-challaege.pages.dev! \n
     Are you up for it? `;
 
     // Encode the entire message
-    const encodedMessage = encodeURIComponent(message);
+    // const encodedMessage = encodeURIComponent(message);
     
-    return `https://wa.me/?text=${encodedMessage}`;
+    return `https://wa.me/?text=${message}`;
 };
 
 
