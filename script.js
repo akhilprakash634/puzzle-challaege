@@ -184,13 +184,18 @@ function showScore() {
         return;
     }
     
+    // Update the current set score
+    setScores[currentSet] = Math.max(setScores[currentSet], currentSetScore);
+    
+    // Calculate total score
+    totalScore = setScores.reduce((sum, score) => sum + score, 0);
+
+    // Display scores
     scoreText.textContent = `Your score for this set: ${currentSetScore} out of ${currentQuizSet.length}`;
 
     let emote = currentSetScore === currentQuizSet.length ? '🎉' : currentSetScore >= PASSING_SCORE ? '😊' : '😞';
     scoreText.textContent += ` ${emote}\nTotal score: ${totalScore}`;
 
-    setScores[currentSet] = Math.max(setScores[currentSet], currentSetScore);
-    totalScore = setScores.reduce((sum, score) => score >= PASSING_SCORE ? sum + score : sum, 0);
     updateUserScore(totalScore);
 
     // Update or create the action button (Retry Set or Next Set)
@@ -283,16 +288,6 @@ function handleVisibilityChange() {
     }
 }
 
-function retrySet() {
-    currentQuestion = 0;
-    currentSetScore = 0;
-    document.getElementById('score-popup').style.display = 'none';
-    showQuestion();
-    updateProgress();
-    updateScoreDisplay();
-    saveUserProgress();
-}
-
 function nextSet() {
     currentSet++;
     if (currentSet < quizSets.length) {
@@ -305,6 +300,16 @@ function nextSet() {
         document.getElementById('score-popup').style.display = 'none';
         localStorage.removeItem('quizUserProgress');
     }
+    updateProgress();
+    updateScoreDisplay();
+    saveUserProgress();
+}
+
+function retrySet() {
+    currentQuestion = 0;
+    currentSetScore = 0;
+    document.getElementById('score-popup').style.display = 'none';
+    showQuestion();
     updateProgress();
     updateScoreDisplay();
     saveUserProgress();
