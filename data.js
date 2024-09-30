@@ -683,7 +683,7 @@ const quizData = {
         'https://m.indiamart.com/impcat/abacus.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=55',
         'https://m.indiamart.com/impcat/educational-toys.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=56',
         'https://m.indiamart.com/impcat/flash-card.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=57',
-        'https://www.youtube.com/@lifefactsday?sub_confirmation=1',
+        'https://www.youtube.com/@factuneed?sub_confirmation=1',
         'https://m.indiamart.com/impcat/impact-modifier.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=72',
         'https://m.indiamart.com/impcat/pvc-blister.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=71',
         'https://m.indiamart.com/impcat/anti-insect-amber-pvc.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=70',
@@ -707,12 +707,21 @@ const quizData = {
         'https://m.indiamart.com/impcat/vinyl-cutting-plotter-machine.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=84',
         'https://m.indiamart.com/impcat/modular-kitchens.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=85',
         'https://m.indiamart.com/impcat/modern-kitchen.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=86',
-        'https://m.indiamart.com/impcat/wooden-modular-kitchen.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=87'
-
-
-
-
-
-
+        'https://m.indiamart.com/impcat/wooden-modular-kitchen.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=87',
+        'https://m.indiamart.com/impcat/pesticide-bottle.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=130',
+        'https://m.indiamart.com/impcat/hdpe-bottle.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=131',
+        'https://m.indiamart.com/impcat/printed-copper-bottle.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=132',
+        'https://m.indiamart.com/impcat/embroidered-umbrella.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=133',
+        'https://m.indiamart.com/impcat/outdoor-umbrella.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=134',
+        'https://m.indiamart.com/impcat/garden-umbrella.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=135',
+        'https://m.indiamart.com/impcat/abacus.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=136',
+        'https://m.indiamart.com/impcat/educational-toys.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=137',
+        'https://m.indiamart.com/impcat/flash-card.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=138',
+        'https://m.indiamart.com/impcat/bed-sheets.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=139',
+        'https://m.indiamart.com/impcat/double-bed-sheets.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=140',
+        'https://m.indiamart.com/impcat/cotton-double-bed-sheets.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=141',
+        'https://m.indiamart.com/impcat/pillows.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=142',
+        'https://m.indiamart.com/impcat/cotton-pillows.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=143',
+        'https://m.indiamart.com/impcat/down-pillow.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=144'
     ]
 };
