@@ -722,6 +722,18 @@ const quizData = {
         'https://m.indiamart.com/impcat/cotton-double-bed-sheets.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=141',
         'https://m.indiamart.com/impcat/pillows.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=142',
         'https://m.indiamart.com/impcat/cotton-pillows.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=143',
-        'https://m.indiamart.com/impcat/down-pillow.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=144'
+        'https://m.indiamart.com/impcat/down-pillow.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=0924&utm_content=144',
+        'https://m.indiamart.com/impcat/sledge-hammer.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=1024&utm_content=165',
+        'https://m.indiamart.com/proddetail/20848334773.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=1024&utm_content=168',
+        'https://m.indiamart.com/proddetail/2853416996755.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=1024&utm_content=167',
+        'https://m.indiamart.com/proddetail/22945074130.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=1024&utm_content=166',
+        'https://m.indiamart.com/impcat/ceiling-speaker.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=1024&utm_content=153',
+        'https://m.indiamart.com/proddetail/2851420296697.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=1024&utm_content=156',
+        'https://m.indiamart.com/proddetail/15672499555.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=1024&utm_content=155',
+        'https://m.indiamart.com/proddetail/2850484188112.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=1024&utm_content=154',
+        'https://m.indiamart.com/impcat/industrial-exhaust-fans.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=1024&utm_content=145',
+        'https://m.indiamart.com/proddetail/9254069891.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=1024&utm_content=148',
+        'https://m.indiamart.com/proddetail/2854209998273.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=1024&utm_content=147',
+        'https://m.indiamart.com/proddetail/18904596362.html?utm_source=mr_data_pirate&utm_medium=affiliate&utm_campaign=1024&utm_content=146'
     ]
 };

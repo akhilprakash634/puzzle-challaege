@@ -360,3 +360,23 @@ h1 {
 #score-popup button:nth-child(2):hover {
     background-color: #128C7E;
 }
+
+#telegram-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#telegram-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0088cc; /* Telegram's brand color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#telegram-link a:hover {
+    background-color: #006699;
+}
