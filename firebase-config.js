@@ -8,7 +8,7 @@
 const firebaseConfig = {
     apiKey: "AIzaSyDjVZFHzjAkAJ52iUlJSK_j8WHwA7XhKmg",
     authDomain: "puzzle-game-338e9.firebaseapp.com",
-    databaseURL: "https://puzzle-game-338e9-default-rtdb.asia-southeast1.firebasedatabase.app",
+    databaseURL: "https://puzzle-game-338e9.asia-southeast1.firebasedatabase.app",
     projectId: "puzzle-game-338e9",
     storageBucket: "puzzle-game-338e9.appspot.com",
     messagingSenderId: "928934999106",
@@ -18,3 +18,4 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
+
