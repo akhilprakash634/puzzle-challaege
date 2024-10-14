@@ -215,7 +215,6 @@ function showScore() {
         actionButton.textContent = 'Next Set';
         actionButton.onclick = () => {
             nextSet();
-            openRandomUrl();
         };
     }
 

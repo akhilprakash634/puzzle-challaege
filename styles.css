@@ -304,6 +304,20 @@ h1 {
     background-color: #e9ecef;
 }
 
+#product-page-button {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+#product-page-button:hover {
+    background-color: #e9ecef;
+}
+
 .popup {
     display: none;
     position: fixed;
